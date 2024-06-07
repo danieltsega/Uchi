@@ -24,11 +24,11 @@ Welcome to **Uchi** - Your Organized Home on the Web. Uchi is a browser extensio
 
 ## Support
 
-For any issues or questions, please contact our support team at [support@uchi.com](mailto:support@uchi.com).
+coming soon....
 
 ## Contributing
 
-We welcome contributions! Please read our [contributing guidelines](#) for more details.
+coming soon....
 
 ## License
 
