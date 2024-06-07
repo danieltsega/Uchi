@@ -43,6 +43,20 @@ function updateTime() {
 
   const dateNow = document.getElementById("date-day");
   dateNow.textContent = `${day} ${month} ${date}`;
+
+  const greeting = document.getElementById("greeting");
+  const currentTime = now.getHours();
+  let greetingMessage;
+
+  if (currentTime < 12) {
+    greetingMessage = "Good Morning, Danny!";
+  } else if (currentTime < 18) {
+    greetingMessage = "Good Afternoon, Danny!";
+  } else {
+    greetingMessage = "Good Evening, Danny!";
+  }
+
+  greeting.textContent = greetingMessage;
 }
 
 setInterval(updateTime, 1000);
