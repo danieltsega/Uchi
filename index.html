@@ -34,11 +34,23 @@
     <footer
       class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
     >
-      <div class="bg-white p-4">
-        <form action="" class="flex flex-col">
-          <input type="text" placeholder="Add name here" />
-          <input type="text" name="" id="" placeholder="Paste link here" />
-          <button type="button">Add</button>
+      <div class="bg-white p-4 hidden">
+        <form action="" class="flex flex-col gap-2">
+          <input
+            type="text"
+            placeholder="Add name here"
+            class="p-1 outline-none border-2 border-gray-300"
+          />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Paste link here"
+            class="p-1 outline-none border-2 border-gray-300"
+          />
+          <button type="button" class="bg-black text-white">
+            <i class="ri-add-line text-xl"></i>
+          </button>
         </form>
       </div>
       <div class="bg-white bg-opacity-15 rounded-lg shadow-lg p-2">
