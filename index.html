@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!--Tailwind Css-->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!--Remix Icons-->
     <link
       rel="stylesheet"
@@ -18,5 +16,34 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Uchi - 家</title>
   </head>
-  <body></body>
+  <body
+    class="bg-fixed bg-cover bg-center flex flex-col justify-center items-center h-lvh"
+    style="background-image: url('test.jpg')"
+  >
+    <!--Head Section-->
+    <section class="flex justify-between items-center w-full px-8 py-4">
+      <!--BookMarks Section-->
+      <section>
+        <div class="bg-white bg-opacity-10 rounded-lg shadow-md p-6 text-white">
+          Test
+        </div>
+      </section>
+    </section>
+
+    <!--Footer Section-->
+    <footer
+      class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
+    >
+      <div class="bg-white p-4">
+        <form action="" class="flex flex-col">
+          <input type="text" placeholder="Add name here" />
+          <input type="text" name="" id="" placeholder="Paste link here" />
+          <button type="button">Add</button>
+        </form>
+      </div>
+      <div class="bg-white bg-opacity-15 rounded-lg shadow-lg p-2">
+        <i class="ri-settings-2-line text-black text-4xl"></i>
+      </div>
+    </footer>
+  </body>
 </html>
