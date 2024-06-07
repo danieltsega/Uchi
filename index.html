@@ -52,11 +52,14 @@
       <!--Search & Time Section-->
       <section class="flex flex-col w-1/2 fixed right-0">
         <div class="flex flex-col items-center">
-          <span class="kanit-medium text-6xl text-white">12 : 00 AM</span>
-          <span class="kanit-regular text-base text-slate-50"
-            >Friday June 7</span
-          >
-          <span class="kanit-regular-italic text-lg text-slate-200"
+          <span class="kanit-medium text-6xl text-white" id="time-now"></span>
+          <span
+            class="kanit-regular text-base text-slate-50"
+            id="date-day"
+          ></span>
+          <span
+            class="kanit-regular-italic text-lg text-slate-200"
+            id="greeting"
             >Good Morning, Danny!</span
           >
         </div>
@@ -90,5 +93,7 @@
         <i class="ri-settings-2-line text-black text-4xl"></i>
       </div>
     </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
