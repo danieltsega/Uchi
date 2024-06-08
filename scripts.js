@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }`;
     linksElement.innerHTML = `
       <a href="${linkUrl}" target="_blank">
-        <div class="rounded-md border-none w-14 h-14 bg-cover bg-center bg-fixed">
-          <img src="${faviconUrl}" alt="${linkName}" class="rounded-md w-full h-full" />
+        <div class="rounded-md border-none w-20 h-20 bg-cover bg-center bg-fixed p-2 bg-gray-300">
+          <img src="${faviconUrl}" alt="${linkName}" class="w-full h-full" />
         </div>
         <div class="kanit-medium text-wrap text-center text-lg mt-2">
           <span>${linkName}</span>
