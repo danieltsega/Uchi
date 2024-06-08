@@ -65,11 +65,8 @@
       </section>
     </section>
 
-    <!--Footer Section-->
-    <footer
-      class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
-    >
-      <div class="bg-white bg-opacity-10 shadow-lg p-4 hidden">
+    <section class="flex justify-end w-full items-center px-2 h-full">
+      <div class="bg-white bg-opacity-10 shadow-lg p-4 hidden" id="form-div">
         <form action="" class="flex flex-col gap-2 kanit-medium">
           <input
             type="text"
@@ -88,8 +85,16 @@
           </button>
         </form>
       </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer
+      class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
+    >
       <div class="bg-white bg-opacity-15 rounded-lg shadow-lg p-2">
-        <i class="ri-settings-2-line text-black text-4xl"></i>
+        <button id="gear-btn">
+          <i class="ri-settings-2-line text-black text-4xl"></i>
+        </button>
       </div>
     </footer>
 
