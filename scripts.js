@@ -22,6 +22,7 @@ function updateTime() {
     "Wednesday",
     "Thursday",
     "Friday",
+    "Saturday",
   ];
   const day = days[now.getDay()];
   const date = now.getDate();
@@ -59,6 +60,21 @@ function updateTime() {
   greeting.textContent = greetingMessage;
 }
 
+fetch("https://type.fit/api/quotes")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
+
 setInterval(updateTime, 1000);
 
 updateTime();
+
+const gearBtn = document.getElementById("gear-btn");
+const formDiv = document.getElementById("form-div");
+
+gearBtn.addEventListener("click", () => {
+  formDiv.classList.toggle("hidden");
+});
