@@ -74,6 +74,7 @@ updateTime();
 
 const gearBtn = document.getElementById("gear-btn");
 const formDiv = document.getElementById("form-div");
+const bodySection = document.getElementById("body-section");
 
 gearBtn.addEventListener("click", () => {
   formDiv.classList.toggle("hidden");
