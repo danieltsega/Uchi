@@ -41,14 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function addLinkToDOM(linkName, linkUrl) {
     const linksElement = document.createElement("div");
     linksElement.className = "flex flex-col items-center w-20";
+    const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${
+      new URL(linkUrl).hostname
+    }`;
     linksElement.innerHTML = `
       <a href="${linkUrl}" target="_blank">
-        <div class="rounded-md border-none w-14 bg-cover bg-center bg-fixed" style="background-color: #${Math.floor(
-          Math.random() * 16777215
-        ).toString(16)};">
-          <span class="text-white text-lg">${linkName
-            .charAt(0)
-            .toUpperCase()}</span>
+        <div class="rounded-md border-none w-14 h-14 bg-cover bg-center bg-fixed">
+          <img src="${faviconUrl}" alt="${linkName}" class="rounded-md w-full h-full" />
         </div>
         <div class="kanit-medium text-wrap text-center text-lg mt-2">
           <span>${linkName}</span>
