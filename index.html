@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Tailwind Css-->
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <!--Remix Icons-->
     <link
       rel="stylesheet"
@@ -14,15 +14,26 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
     <title>Uchi - 家</title>
   </head>
   <body>
     <section
       id="body-section"
       class="bg-fixed bg-cover bg-center flex flex-col items-center h-lvh"
-      style="background-image: url('test.jpg')"
+      style="background-image: url('assets/test.jpg')"
     >
       <!--Quote Section-->
       <section class="flex justify-center items-center py-8">
@@ -39,18 +50,8 @@
         <section>
           <div
             class="bg-white bg-opacity-10 rounded-lg shadow-md p-6 text-white grid grid-cols-4 gap-4"
-          >
-            <div class="flex flex-col items-center w-20">
-              <div
-                class="rounded-md border-none w-14 bg-cover bg-center bg-fixed"
-              >
-                <img src="favi.jpg" alt="Link Favicon" class="rounded-md" />
-              </div>
-              <div class="kanit-medium text-wrap text-center text-lg">
-                <span>Google</span>
-              </div>
-            </div>
-          </div>
+            id="links-div"
+          ></div>
         </section>
 
         <!--Search & Time Section-->
@@ -72,20 +73,22 @@
       <!--Form Section-->
       <section class="flex justify-end w-full items-center px-2 h-full">
         <div class="bg-white bg-opacity-30 shadow-lg p-4 hidden" id="form-div">
-          <form action="" class="flex flex-col gap-2 kanit-medium">
+          <form class="flex flex-col gap-2 kanit-medium" id="link-form">
             <input
               type="text"
               placeholder="Add name here....."
               class="py-1 px-2 outline-none rounded-lg"
+              id="link-name"
+              required
             />
             <input
-              type="text"
-              name=""
-              id=""
+              type="url"
               placeholder="Paste link here....."
               class="py-1 px-2 outline-none rounded-lg"
+              id="link-url"
+              required
             />
-            <button type="button" class="bg-black text-white p-1">
+            <button type="submit" class="bg-black text-white p-1">
               <i class="ri-add-line text-xl"></i>
             </button>
           </form>

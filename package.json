@@ -1,0 +1,20 @@
+{
+  "name": "uchi",
+  "version": "1.0.0",
+  "description": "Welcome to **Uchi** - Your Organized Home on the Web. Uchi is a browser extension that transforms your homepage into a neat and efficient hub for managing your bookmarks and tabs.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/styles.css -o ./styles.css --watch"
+  }
+}

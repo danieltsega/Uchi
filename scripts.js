@@ -1,3 +1,64 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const gearBtn = document.getElementById("gear-btn");
+  const formDiv = document.getElementById("form-div");
+  const linkForm = document.getElementById("link-form");
+  const linksDiv = document.getElementById("links-div");
+
+  // Load stored links on startup
+  chrome.storage.sync.get(["links"], (result) => {
+    if (result.links) {
+      result.links.forEach((link) => {
+        addLinkToDOM(link.linkName, link.linkUrl);
+      });
+    }
+  });
+
+  // Add link form submission handler
+  linkForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const linkName = document.getElementById("link-name").value;
+    const linkUrl = document.getElementById("link-url").value;
+
+    // Add link to storage
+    chrome.storage.sync.get(["links"], (result) => {
+      const links = result.links || [];
+      links.push({ linkName, linkUrl });
+
+      chrome.storage.sync.set({ links }, () => {
+        addLinkToDOM(linkName, linkUrl);
+        linkForm.reset();
+        formDiv.classList.add("hidden");
+      });
+    });
+  });
+
+  // Toggle form visibility
+  gearBtn.addEventListener("click", () => {
+    formDiv.classList.toggle("hidden");
+  });
+
+  // Function to add link to the DOM
+  function addLinkToDOM(linkName, linkUrl) {
+    const linksElement = document.createElement("div");
+    linksElement.className = "flex flex-col items-center w-20";
+    linksElement.innerHTML = `
+      <a href="${linkUrl}" target="_blank">
+        <div class="rounded-md border-none w-14 bg-cover bg-center bg-fixed" style="background-color: #${Math.floor(
+          Math.random() * 16777215
+        ).toString(16)};">
+          <span class="text-white text-lg">${linkName
+            .charAt(0)
+            .toUpperCase()}</span>
+        </div>
+        <div class="kanit-medium text-wrap text-center text-lg mt-2">
+          <span>${linkName}</span>
+        </div>
+      </a>
+    `;
+    linksDiv.appendChild(linksElement);
+  }
+});
+
 function updateTime() {
   const now = new Date();
 
@@ -60,22 +121,15 @@ function updateTime() {
   greeting.textContent = greetingMessage;
 }
 
-fetch("https://type.fit/api/quotes")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
+// Fetching quotes (this section doesn't seem to be utilized in the current example, so I commented it out)
+// fetch("https://type.fit/api/quotes")
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//   });
 
 setInterval(updateTime, 1000);
 
 updateTime();
-
-const gearBtn = document.getElementById("gear-btn");
-const formDiv = document.getElementById("form-div");
-const bodySection = document.getElementById("body-section");
-
-gearBtn.addEventListener("click", () => {
-  formDiv.classList.toggle("hidden");
-});
