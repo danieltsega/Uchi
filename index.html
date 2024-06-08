@@ -18,85 +18,91 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <title>Uchi - 家</title>
   </head>
-  <body
-    class="bg-fixed bg-cover bg-center flex flex-col items-center h-lvh"
-    style="background-image: url('test.jpg')"
-  >
-    <!--Quote Section-->
-    <section class="flex justify-center items-center py-8">
-      <div class="text-center mb-8">
-        <span class="font-bold text-3xl text-white">"To be or not to be"</span>
-        <p class="italic text-slate-200 mt-2">- William Shakespeare</p>
-      </div>
-    </section>
-    <!--Head Section-->
-    <section class="flex justify-between items-start w-full px-8 py-4">
-      <!--BookMarks Section-->
-      <section>
-        <div
-          class="bg-white bg-opacity-10 rounded-lg shadow-md p-6 text-white grid grid-cols-4 gap-4"
-        >
-          <div class="flex flex-col items-center w-20">
-            <div
-              class="rounded-md border-none w-14 bg-cover bg-center bg-fixed"
-            >
-              <img src="favi.jpg" alt="Link Favicon" class="rounded-md" />
-            </div>
-            <div class="kanit-medium text-wrap text-center text-lg">
-              <span>Google</span>
+  <body>
+    <section
+      id="body-section"
+      class="bg-fixed bg-cover bg-center flex flex-col items-center h-lvh"
+      style="background-image: url('test.jpg')"
+    >
+      <!--Quote Section-->
+      <section class="flex justify-center items-center py-8">
+        <div class="text-center mb-8">
+          <span class="font-bold text-3xl text-white"
+            >"To be or not to be"</span
+          >
+          <p class="italic text-slate-200 mt-2">- William Shakespeare</p>
+        </div>
+      </section>
+      <!--Head Section-->
+      <section class="flex justify-between items-start w-full px-8 py-4">
+        <!--BookMarks Section-->
+        <section>
+          <div
+            class="bg-white bg-opacity-10 rounded-lg shadow-md p-6 text-white grid grid-cols-4 gap-4"
+          >
+            <div class="flex flex-col items-center w-20">
+              <div
+                class="rounded-md border-none w-14 bg-cover bg-center bg-fixed"
+              >
+                <img src="favi.jpg" alt="Link Favicon" class="rounded-md" />
+              </div>
+              <div class="kanit-medium text-wrap text-center text-lg">
+                <span>Google</span>
+              </div>
             </div>
           </div>
+        </section>
+
+        <!--Search & Time Section-->
+        <section class="flex flex-col w-1/2 fixed right-0">
+          <div class="flex flex-col items-center">
+            <span class="kanit-medium text-6xl text-white" id="time-now"></span>
+            <span
+              class="kanit-regular text-base text-slate-50"
+              id="date-day"
+            ></span>
+            <span
+              class="kanit-regular-italic text-lg text-slate-200"
+              id="greeting"
+            ></span>
+          </div>
+        </section>
+      </section>
+
+      <!--Form Section-->
+      <section class="flex justify-end w-full items-center px-2 h-full">
+        <div class="bg-white bg-opacity-30 shadow-lg p-4 hidden" id="form-div">
+          <form action="" class="flex flex-col gap-2 kanit-medium">
+            <input
+              type="text"
+              placeholder="Add name here....."
+              class="py-1 px-2 outline-none rounded-lg"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Paste link here....."
+              class="py-1 px-2 outline-none rounded-lg"
+            />
+            <button type="button" class="bg-black text-white p-1">
+              <i class="ri-add-line text-xl"></i>
+            </button>
+          </form>
         </div>
       </section>
 
-      <!--Search & Time Section-->
-      <section class="flex flex-col w-1/2 fixed right-0">
-        <div class="flex flex-col items-center">
-          <span class="kanit-medium text-6xl text-white" id="time-now"></span>
-          <span
-            class="kanit-regular text-base text-slate-50"
-            id="date-day"
-          ></span>
-          <span
-            class="kanit-regular-italic text-lg text-slate-200"
-            id="greeting"
-          ></span>
-        </div>
-      </section>
-    </section>
-
-    <section class="flex justify-end w-full items-center px-2 h-full">
-      <div class="bg-white bg-opacity-10 shadow-lg p-4 hidden" id="form-div">
-        <form action="" class="flex flex-col gap-2 kanit-medium">
-          <input
-            type="text"
-            placeholder="Add name here....."
-            class="py-1 px-2 outline-none rounded-lg bg-white bg-opacity-15"
-          />
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Paste link here....."
-            class="py-1 px-2 outline-none rounded-lg bg-white bg-opacity-15"
-          />
-          <button type="button" class="bg-black text-white p-1">
-            <i class="ri-add-line text-xl"></i>
+      <!--Footer Section-->
+      <footer
+        class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
+      >
+        <div class="bg-white bg-opacity-15 rounded-lg shadow-lg p-2">
+          <button id="gear-btn">
+            <i class="ri-settings-2-line text-black text-4xl"></i>
           </button>
-        </form>
-      </div>
+        </div>
+      </footer>
     </section>
-
-    <!--Footer Section-->
-    <footer
-      class="w-full flex justify-end items-center fixed bottom-0 p-2 gap-4"
-    >
-      <div class="bg-white bg-opacity-15 rounded-lg shadow-lg p-2">
-        <button id="gear-btn">
-          <i class="ri-settings-2-line text-black text-4xl"></i>
-        </button>
-      </div>
-    </footer>
 
     <script src="scripts.js"></script>
   </body>
